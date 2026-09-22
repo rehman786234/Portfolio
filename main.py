@@ -7,9 +7,9 @@ app = FastAPI(title="UserSide Api of portfolio")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],          # tighten this in production
-    allow_credentials=True,
-    allow_methods=["*"],
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
 
